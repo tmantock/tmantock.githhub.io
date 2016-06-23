@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <script>
+        number = '';
+        var inputArray = [];
+        var click = null;
+        var clicks = null;
+        var firstNumber = '';
+        var subsequentNumber = '';
+        var secondNumber;
+        var subsequentSecondNumber;
+        //var canClick = true;
+
+        function digit_input_one (element) {
+            if (click == null) {
+                click = true;
+                firstNumber = $(element).html();
+                console.log('first number is: ' + firstNumber);
+            }
+
+
+            else if (click==true) {
+                subsequentNumber = $(element).html();
+                console.log('Subsequent Number is: ' + subsequentNumber);
+            }
+
+            firstNumber += subsequentNumber;
+            $('.output').html(firstNumber);
+            console.log(firstNumber);
+        }
+
+        function sum () {
+            var screenOutput = $('.output').html();
+            inputArray.push(screenOutput);
+            console.log(inputArray);
+            firstNumber = '';
+        }
+
+        function equate () {
+            var screenOutput = $('.output').html();
+            inputArray.push(screenOutput);
+            var numberFirst = parseInt(inputArray[0]);
+            var numberSecond = parseInt(inputArray[1]);
+            var equation = numberFirst + numberSecond;
+            $('.output').html(equation);
+        }
+
+    </script>
+    <style>
+        .output {
+            height: 5vh;
+            width: 5vw;
+            color: red;
+            margin-top: 10%;
+        }
+    </style>
+</head>
+<body>
+<div onclick = "digit_input_one(this)">0</div>
+<div onclick = "digit_input_one(this)">1</div>
+<div onclick = "digit_input_one(this)">2</div>
+<div onclick = "digit_input_one(this)">3</div>
+<div onclick = "digit_input_one(this)">4</div>
+<div onclick = "digit_input_one(this)">6</div>
+<div onclick = "digit_input_one(this)">7</div>
+<div onclick = "digit_input_one(this)">8</div>
+<div onclick = "digit_input_one(this)">9</div>
+<div onclick = "sum()">+</div>
+<div onclick = "equate()">=</div>
+<div class = "output"></div>
+</body>
+</html>

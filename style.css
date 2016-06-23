@@ -1,0 +1,152 @@
+#page {
+  height: 100vh;
+  width: 100vw;
+  display: inline-block;
+}
+
+.buffer {
+  height: 100%;
+}
+
+.calculatorContainer {
+  position: relative;
+  top: 35%;
+  transform: translateY(-35%);
+  height: 80%;
+  font-family: 'Roboto', sans-serif;
+  min-height: 410px;
+  min-width: 250px;
+}
+.calculator {
+    height: 100%;
+    width: 100%;
+}
+
+.screen-container {
+    height: 20%;
+    padding: 0 !important;
+}
+
+.screen {
+    height: 100%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.output {
+    position: relative;
+    top: 45%;
+    transform: translateY(-45%);
+}
+
+.calcBody {
+    height: 80%;
+    margin: 0;
+    padding: 0 !important;
+    background: #913D88;
+}
+
+.numericalContainer {
+    height: 100%;
+    padding: 0 !important;
+}
+
+.calcRowOne,
+.calcRowTwo,
+.calcRowThree,
+.calcRowFour,
+.calcRowFive,
+.calcRowSix {
+    height: 20%;
+    padding: 0 !important;
+}
+
+.calcRowOne {
+    background: #F89406;
+}
+
+.darkOrange {
+    background: #D35400;
+}
+
+.clear,
+.button {
+    height: 100%;
+    text-align: center;
+    transition: all .1s;
+    color: #ffffff;
+}
+
+.text {
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%,-25%);
+}
+
+.operatorContainer {
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 !important;
+    background: #2C3E50;
+    color: #ffffff;
+}
+
+.operator {
+    text-align: center;
+    height: 20%;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+}
+
+.whitePress {
+    background: #D2D7D3;
+    color: black;
+}
+
+.circle {
+    border-radius: 50%;
+    background: #F89406;
+    color: #000000;
+}
+
+.square {
+    border-radius: 0%;
+}
+
+h3  {
+    text-align: center;
+}
+
+#selectConverter,
+.metric-container,
+.currency-container {
+  display: none;
+  height: 0;
+  background: #ffffff;
+  border-top: 1px solid #D2D7D3;
+}
+
+.buffer {
+  margin: none;
+}
+
+.switchMetric {
+  font-size: 1.5em;
+  padding-top: 2%;
+}
+@media screen and (max-width: 414px) {
+  .calculatorContainer {
+    height: 90%;
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
+  .form-control {
+    height: 100%;
+    font-size: 1em;
+  }
+}
